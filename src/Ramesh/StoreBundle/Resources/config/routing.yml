@@ -1,0 +1,39 @@
+ramesh_store_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: RameshStoreBundle:Default:index }
+    
+category_add:
+    pattern:  /category/add
+    defaults: { _controller: RameshStoreBundle:Category:add }
+    
+category_show:
+    pattern:  /category/show
+    defaults: { _controller: RameshStoreBundle:Category:show }
+    
+category_update:
+    pattern:  /category/update/{id}
+    defaults: { _controller: RameshStoreBundle:Category:update }
+      
+category_remove:
+    pattern:  /category/remove/{id}
+    defaults: { _controller: RameshStoreBundle:Category:delete }
+    
+category_query:
+    pattern:  /category/query/
+    defaults: { _controller: RameshStoreBundle:Category:query }
+    
+category_repo:
+    pattern:  /category/repo/
+    defaults: { _controller: RameshStoreBundle:Category:repo }
+    
+product_add:
+    pattern:  /product/add
+    defaults: { _controller: RameshStoreBundle:Product:add }
+    
+product_show:
+    pattern:  /product/show
+    defaults: { _controller: RameshStoreBundle:Product:show }
+    
+product_show:
+    pattern:  /product/join
+    defaults: { _controller: RameshStoreBundle:Product:join }

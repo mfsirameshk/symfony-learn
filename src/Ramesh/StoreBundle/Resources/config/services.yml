@@ -1,0 +1,13 @@
+parameters:
+#    ramesh_store.example.class: Ramesh\StoreBundle\Example
+
+services:
+#    ramesh_store.example:
+#        class: %ramesh_store.example.class%
+#        argum ents: [@service_id, "plain_value", %parameter%]
+
+services:
+    my_doctrine_listener:
+        class:   Ramesh\BlogBundle\Listener\MyDoctrineListener
+        tags:
+              -  { name: doctrine_mongodb.odm.event_listener, event: prePersist }

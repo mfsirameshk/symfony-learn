@@ -1,0 +1,24 @@
+{# Ramesh/HelloBundle/Resources/views/base.html.twig #}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>{% block title %}Ramesh Application{% endblock %}</title>
+        <link href="{{ asset('bundles/rameshhello/css/style.css') }}" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="{{ asset('bundles/rameshhello/js/main.js') }}" > </script>
+    </head>
+    <body>
+        <div id="sidebar">
+            {% block sidebar %}
+                <ul>
+                      <li><a href="{{ url("hello", {name:"Ramesh"}) }}">Hello</a></li>
+                      <li><a href="{{ url("sessionCheck") }}">Session</a></li>
+                </ul>
+            {% endblock %}
+        </div>
+
+        <div id="content">
+            {% block body %}{% endblock %}
+        </div>
+    </body>
+</html>

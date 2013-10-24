@@ -1,0 +1,42 @@
+{#
+{% form_theme form _self %}
+{% block text_widget %}
+    <span class="my_text_container">
+        {% set type = type|default('number') %}
+        {{ block('form_widget_simple') }}
+    </span>
+{% endblock %}
+#}
+
+<style>
+    label {
+        display: inline-block;
+        min-width: 150px;
+    }
+    
+    #user_dob {
+        display: inline;
+    }
+</style>
+
+{% form_theme form 'RameshBlogBundle:Forms:custom.html.twig' %}
+
+{{ form_start(form) }}
+    {{ form_errors(form) }}
+<div style="background-color:#F2F5F2"> <span> Basic Info </span>
+    {{ form_row(form.name) }}
+    {{ form_row(form.email) }}
+    {{ form_row(form.gender) }}
+    {{ form_row(form.password) }}
+</div>
+<br/>
+<div style="background-color:#D0D0D0"> <span> Age Info </span>
+    {{ form_row(form.age) }}
+    {{ form_row(form.dob) }}
+</div>
+<br/>
+<div style="background-color:#C2C2B2"> <span> Location Info </span>
+    {{ form_row(form.country) }}
+    {{ form_row(form.currency) }}
+</div>
+{{ form_end(form) }}

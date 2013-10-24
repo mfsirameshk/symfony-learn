@@ -1,0 +1,46 @@
+user_create:
+    pattern:  /user/create
+    defaults: { _controller: RameshBlogBundle:User:create }
+    
+user_create_thru_form:
+    pattern:  /user/create_thru_form
+    defaults: { _controller: RameshBlogBundle:User:createThruForm }
+    
+user_create_success: 
+    pattern: /user/create_success/{user}
+    defaults: { _controller: RameshBlogBundle:User:createSuccess }
+
+user_list_all: 
+    pattern: /user/list_all
+    defaults: { _controller: RameshBlogBundle:User:listUsers }
+    
+user_login: 
+    pattern: /user/login
+    defaults: { _controller: RameshBlogBundle:User:login }
+    
+user_my_posts: 
+    pattern: /user/myposts
+    defaults: { _controller: RameshBlogBundle:User:showMyPosts }
+    
+post_create:
+    pattern:  /post/create
+    defaults: { _controller: RameshBlogBundle:Post:create }
+    
+post_show_all:
+    pattern:  /post/show_all
+    defaults: { _controller: RameshBlogBundle:Post:showAll }
+    
+post_show_users:
+    pattern:  /user/show_all_posts/{id}
+    defaults: { _controller: RameshBlogBundle:User:showPosts }
+    
+post_show_n:
+    pattern:  /posts/show_n/{n}
+    defaults: { _controller: RameshBlogBundle:Post:showNPosts }
+    
+trans:
+    pattern:  /posts/trans
+    defaults: { _controller: RameshBlogBundle:Post:translate }
+    
+login_check:
+    pattern:   user/login_check

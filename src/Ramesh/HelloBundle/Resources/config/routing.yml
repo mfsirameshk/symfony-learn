@@ -1,0 +1,24 @@
+hello:
+    path:     /hello/{name}
+    defaults: { _controller: RameshHelloBundle:Hello:index }
+
+param_test:
+    path:     /hello/test/paramCheck/{first_name}/{last_name}/{color}
+    defaults: { _controller: RameshHelloBundle:Hello:paramCheck, color:green }
+
+requestcheck:
+    path:     /requestcheck
+    defaults: { _controller: RameshHelloBundle:Hello:requestCheck }
+
+sessionCheck:
+    path:     /sessionCheck
+    defaults: { _controller: RameshHelloBundle:Hello:sessionCheck }
+
+getPostCheck:
+    path:     /getPostCheck
+    defaults: { _controller: RameshHelloBundle:Hello:getPostCheck }
+    
+twigTest:
+    path:     /twigTest
+    defaults: { _controller: RameshHelloBundle:Hello:twigTest }
+

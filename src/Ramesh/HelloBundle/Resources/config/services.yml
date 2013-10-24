@@ -1,0 +1,7 @@
+parameters:
+#    ramesh_hello.example.class: Ramesh\HelloBundle\Example
+
+services:
+#    ramesh_hello.example:
+#        class: %ramesh_hello.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

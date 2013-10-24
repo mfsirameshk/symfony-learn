@@ -1,0 +1,31 @@
+parameters:
+    genders:
+        m: Male
+        f: Female
+#    ramesh_blog.example.class: Ramesh\BlogBundle\Example
+
+#services:
+#    ramesh_blog.example:
+#        class: %ramesh_blog.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+
+services:
+    ramesh_blog.form.type.user:
+        class: Ramesh\BlogBundle\Form\Type\UserType
+        tags:
+            - { name: form.type, alias: user }
+    my_doctrine_listener:
+        class:   Ramesh\BlogBundle\Listener\MyDoctrineListener
+        tags:
+              -  { name: doctrine_mongodb.odm.event_listener, event: prePersist }
+    ramesh_blog.form.type.gender:
+        class: Ramesh\BlogBundle\Form\Type\GenderType
+        arguments:
+            - "%genders%"
+        tags:
+            - { name: form.type, alias: gender }
+    ramesh_blog.login_listener:
+        class: Ramesh\BlogBundle\Listener\LoginListener
+        arguments: [@doctrine_mongodb]
+        tags:
+            - { name: kernel.event_listener, event: security.interactive_login, method: onLogin }

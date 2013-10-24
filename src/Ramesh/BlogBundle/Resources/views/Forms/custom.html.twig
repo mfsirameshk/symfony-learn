@@ -1,0 +1,23 @@
+{% extends 'form_div_layout.html.twig' %}
+
+{% block form_widget_simple %}
+    {{ parent() }} 
+    {% if required %}
+        <span class="required" style="color:red;" title="This field is required">*</span>
+    {% endif %}
+{% endblock %}
+        
+{% block choice_widget %}
+    {{ parent() }} 
+    {% if required %}
+        <span class="required" style="color:red;" title="This field is required">*</span>
+    {% endif %}
+{% endblock %}
+        
+{% block checkbox_widget %}
+    {{ parent() }} 
+    {% if required %}
+        <span class="required" style="color:red;" title="This field is required">*</span>
+    {% endif %}
+{% endblock %}
+        

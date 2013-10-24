@@ -1,0 +1,16 @@
+ramesh_blog:
+    resource: "@RameshBlogBundle/Resources/config/routing.yml"
+    prefix:   /
+
+ramesh_my_propel:
+    resource: "@RameshMyPropelBundle/Resources/config/routing.yml"
+    prefix:   /
+
+ramesh_store:
+    resource: "@RameshStoreBundle/Resources/config/routing.yml"
+    prefix:   /
+
+ramesh_hello:
+    resource: "@RameshHelloBundle/Resources/config/routing.yml"
+    prefix:   /
+

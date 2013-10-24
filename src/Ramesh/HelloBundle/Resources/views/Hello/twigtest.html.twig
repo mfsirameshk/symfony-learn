@@ -1,0 +1,12 @@
+{# src/Ramesh/HelloBundle/Resources/views/Blog/index.html.twig #}
+{% extends 'RameshHelloBundle::base.html.twig' %}
+
+{% block title %}Ramesh blog posts{% endblock %}
+{% set a = "<script type='text/javascript'>alert(12)</script>" %}
+{% block body %}
+    {% for entry in posts %}
+        <h2>{{ entry.title }}</h2>
+        <p>{{ entry.body }}</p>
+    {% endfor %}
+    {{ a | upper}} 
+{% endblock %}

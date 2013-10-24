@@ -1,0 +1,7 @@
+parameters:
+#    ramesh_my_propel.example.class: Ramesh\MyPropelBundle\Example
+
+services:
+#    ramesh_my_propel.example:
+#        class: %ramesh_my_propel.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

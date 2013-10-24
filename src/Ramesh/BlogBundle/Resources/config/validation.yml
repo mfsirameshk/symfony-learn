@@ -1,0 +1,19 @@
+# Ramesh/BlogBundle/Resources/config/validation.yml
+Ramesh\BlogBundle\Document\User:
+    properties:
+        name:
+            - NotBlank: ~
+        email:
+            - NotBlank: ~
+            - Email: 
+                message: The email "{{ value }}" is not a valid email.
+                checkMX: false
+        age:
+            - NotBlank: ~
+            - Type:
+                type: integer
+        file:
+            - File:
+                maxSize: 6000000
+                
+            

@@ -1,0 +1,33 @@
+ramesh_my_propel_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: RameshMyPropelBundle:Default:index }
+    
+add_pproduct:
+    pattern:  /propel/add_product
+    defaults: { _controller: RameshMyPropelBundle:Default:create }
+    
+show_pproduct:
+    pattern:  /propel/show_product/{id}
+    defaults: { _controller: RameshMyPropelBundle:Default:show, id:1 }
+    
+ud_pproduct:
+    pattern:  /propel/update_product/{id}/{action}
+    defaults: { _controller: RameshMyPropelBundle:Default:update, id:1, action:'update' }
+    
+query_pproduct:
+    pattern:  /propel/query_product
+    defaults: { _controller: RameshMyPropelBundle:Default:query }
+    
+prodwithcat: 
+    pattern: /propel/prodwithcat
+    defaults: { _controller: RameshMyPropelBundle:Default:prodwithcat } 
+    
+showprodwithcat: 
+    pattern: /propel/showprodwithcat
+    defaults: { _controller: RameshMyPropelBundle:Default:showProdWithCat } 
+
+
+    
+
+    
+
