@@ -69,6 +69,8 @@ class UserController extends Controller {
         $user = new User();
         $form = $this->createForm('user', $user, array('method' => 'POST'));
         $form->handleRequest($request);
+        $response = new Response();
+        $response->headers->set('Cache-Control', 'no-cache');
         if ($form->isSubmitted()) {
             if ($form->isValid()) {
                 $dm = $this->get('doctrine_mongodb')->getManager();
@@ -86,10 +88,13 @@ class UserController extends Controller {
                 return $this->redirect($this->generateUrl('user_create_success', array('user' => $user->getId())));
             }
         }
-
-        return $this->render('RameshBlogBundle:User:new.html.twig', array(
+         $content = $this->renderView('RameshBlogBundle:User:new.html.twig', array(
                 'form' => $form->createView(),
         ));
+        $response->headers->set('X-HT', 'sdds');
+        $response->setContent($content);
+        #$response->send();
+        return $response;
     }
     
     
@@ -101,7 +106,8 @@ class UserController extends Controller {
     public function loginAction() {
         $request = $this->getRequest();
         $session = $request->getSession();
-
+         $response = new Response();
+        $response->headers->set('Cache-Control', 'no-cache');
         // get the login error if there is one
         if ($request->attributes->has(SecurityContext::AUTHENTICATION_ERROR)) {
             $error = $request->attributes->get(
@@ -111,18 +117,22 @@ class UserController extends Controller {
             $error = $session->get(SecurityContext::AUTHENTICATION_ERROR);
             $session->remove(SecurityContext::AUTHENTICATION_ERROR);
         }
-
-        return $this->render(
+        $view = $this->renderView(
                 'RameshBlogBundle:User:login.html.twig', array(
                 // last username entered by the user
                 'last_username' => $session->get(SecurityContext::LAST_USERNAME),
                 'error' => $error,
                 )
         );
+         $response->headers->set('X-HT', 'sdds');
+        $response->setContent($view);
+        #$response->send();
+        return $response;
     }
     
     public function showMyPostsAction() {
         $user= $this->get('security.context')->getToken()->getUser();
+        echo $user->getCcExp()->format('Y-m-d');
         $posts = $user->getPosts();
         foreach ($posts as $post) {
             echo 'id: ', $post->getId();

@@ -1,3 +1,7 @@
+ramesh_expiry_field:
+    resource: "@RameshExpiryFieldBundle/Resources/config/routing.yml"
+    prefix:   /
+
 ramesh_blog:
     resource: "@RameshBlogBundle/Resources/config/routing.yml"
     prefix:   /

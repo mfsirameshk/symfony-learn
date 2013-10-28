@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "ad030f3bb3b712fdf27bc5fff6e3a6b3",
+    "hash": "896e8f6a25f2930dae560d4d16159200",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -600,16 +600,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/mongodb-odm.git",
-                "reference": "848a7ba9cc13396a661034b81fb9078b88a31b46"
+                "reference": "cc69523a3eccae7c8d71a9a03087bec90c179f25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/mongodb-odm/zipball/848a7ba9cc13396a661034b81fb9078b88a31b46",
-                "reference": "848a7ba9cc13396a661034b81fb9078b88a31b46",
+                "url": "https://api.github.com/repos/doctrine/mongodb-odm/zipball/cc69523a3eccae7c8d71a9a03087bec90c179f25",
+                "reference": "cc69523a3eccae7c8d71a9a03087bec90c179f25",
                 "shasum": ""
             },
             "require": {
-                "doctrine/common": ">=2.2.0,<2.5-dev",
+                "doctrine/annotations": "~1.0",
+                "doctrine/cache": "~1.0",
+                "doctrine/collections": "~1.0",
+                "doctrine/common": "2.4.*",
                 "doctrine/inflector": "~1.0",
                 "doctrine/mongodb": "1.0.*",
                 "php": ">=5.3.2",
@@ -666,7 +669,7 @@
                 "odm",
                 "persistence"
             ],
-            "time": "2013-10-16 18:00:12"
+            "time": "2013-10-18 18:06:46"
         },
         {
             "name": "doctrine/mongodb-odm-bundle",
@@ -1143,21 +1146,24 @@
         },
         {
             "name": "propel/propel1",
-            "version": "1.6.9",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/propelorm/Propel.git",
-                "reference": "8b6a304acddafe83b7ae780a7860601a08a1e252"
+                "reference": "09058f1443bc287e550b9342a4379aac2e0a0b8f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/propelorm/Propel/zipball/8b6a304acddafe83b7ae780a7860601a08a1e252",
-                "reference": "8b6a304acddafe83b7ae780a7860601a08a1e252",
+                "url": "https://api.github.com/repos/propelorm/Propel/zipball/09058f1443bc287e550b9342a4379aac2e0a0b8f",
+                "reference": "09058f1443bc287e550b9342a4379aac2e0a0b8f",
                 "shasum": ""
             },
             "require": {
                 "phing/phing": "~2.4",
                 "php": ">=5.2.4"
+            },
+            "require-dev": {
+                "pear-pear.php.net/pear_packagefilemanager2": "@stable"
             },
             "bin": [
                 "generator/bin/propel-gen",
@@ -1166,7 +1172,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.6-dev"
+                    "dev-master": "1.7-dev"
                 }
             },
             "autoload": {
@@ -1199,7 +1205,7 @@
                 "orm",
                 "persistence"
             ],
-            "time": "2013-03-31 17:25:18"
+            "time": "2013-10-21 12:52:56"
         },
         {
             "name": "psr/log",
@@ -1869,10 +1875,10 @@
         "doctrine/mongodb-odm": 20,
         "doctrine/mongodb-odm-bundle": 20
     },
-    "platform": {
-        "php": ">=5.3.3"
-    },
-    "platform-dev": [
+    "platform": [
 
-    ]
+    ],
+    "platform-dev": {
+        "php": ">=5.3.3"
+    }
 }

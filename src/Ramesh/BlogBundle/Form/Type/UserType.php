@@ -15,8 +15,9 @@ class UserType extends AbstractType {
             ->add('age', 'integer')
             ->add('country', 'country', array('empty_value' => 'Please Select'))
             ->add('currency', 'currency', array('empty_value' => 'Please Select'))
-            ->add('dob', 'birthday', array('empty_value' => 'Select', 'widget' => 'single_text', 'format' => 'yyyy-MM-dd'))
+            ->add('dob', 'birthday', array('empty_value' => 'Select', 'widget' => 'choice', 'format' => 'yyyy-MM-dd'))
             ->add('file', 'file')
+            ->add('ccExp', 'expiry')
             //->add('group',new GroupType())
             ->add('agreement', 'checkbox', array('required' => true, 'mapped' => false))
             ->add('group', 'document', array('label' => 'Group Name',

@@ -75,13 +75,16 @@ class PostController extends Controller {
 
     public function translateAction() {
         #$translated = $this->get('translator')->trans('Symfony2 is great');
-        /* $name = 'Ramesh';
-          $translated = $this->get('translator')->trans(
-          'Hello %name%', array('%name%' => $name)
-          ); */
-        $translated = $this->get('translator')->transChoice(
-            'There is %count% apple|There are %count% apples', 10, array('%count%' => 5)
+        $name = 'Ramesh';
+        $translated = $this->get('translator')->trans(
+            'Hello %name%', array('%name%' => $name)
         );
+        /* $translated = $this->get('translator')->transChoice(
+          'There is %count% apple|There are %count% apples', 10, array('%count%' => 5)
+          ); */
+        /* $translated = $this->get('translator')->transChoice(
+          '{0} There are no apples|{1} There is one apple|]1,19] There are %count% apples|[20,Inf] There are many apples', 100, array('%count%' => 100)
+          ); */
         return new Response($translated);
     }
 

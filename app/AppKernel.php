@@ -22,6 +22,7 @@ class AppKernel extends Kernel
             new Ramesh\MyPropelBundle\RameshMyPropelBundle(),
             new Doctrine\Bundle\MongoDBBundle\DoctrineMongoDBBundle(),
             new Ramesh\BlogBundle\RameshBlogBundle(),
+            new Ramesh\Bundle\ExpiryFieldBundle\RameshExpiryFieldBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

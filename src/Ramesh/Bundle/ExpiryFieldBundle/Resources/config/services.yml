@@ -1,0 +1,14 @@
+parameters:
+#    ramesh_expiry_field.example.class: Ramesh\Bundle\ExpiryFieldBundle\Example
+
+#services:
+#    ramesh_expiry_field.example:
+#        class: %ramesh_expiry_field.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+
+services:
+    ramesh_expiry.form.type.expiry:
+        class: Ramesh\Bundle\ExpiryFieldBundle\Form\Type\ExpiryType
+        arguments: ["@doctrine_mongodb.odm.document_manager"]
+        tags:
+            - { name: form.type, alias: expiry }

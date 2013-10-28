@@ -66,6 +66,11 @@ class User implements UserInterface {
      * @MongoDB\Date
      */
     protected $dob;
+    
+    /**
+     * @MongoDB\Date
+     */
+    protected $ccExp;
 
     /**
      * @MongoDB\ReferenceOne(targetDocument="Group")
@@ -546,5 +551,27 @@ class User implements UserInterface {
     public function getTotalLogins()
     {
         return empty($this->totalLogins) ? 0 : $this->totalLogins;
+    }
+
+    /**
+     * Set ccExp
+     *
+     * @param date $ccExp
+     * @return self
+     */
+    public function setCcExp($ccExp)
+    {
+        $this->ccExp = $ccExp;
+        return $this;
+    }
+
+    /**
+     * Get ccExp
+     *
+     * @return date $ccExp
+     */
+    public function getCcExp()
+    {
+        return $this->ccExp;
     }
 }

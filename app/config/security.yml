@@ -58,6 +58,7 @@ security:
             
     access_control:
         - { path: ^/demo/secured/hello/admin/, roles: ROLE_ADMIN }
-        - { path: ^/*, roles: ROLE_USER }
         - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: http }
-        - { path: ^/user/create_thru_form/, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: http }
+        - { path: /user/create_thru_form, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: http }
+        - { path: /user/create_success, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: http }
+        - { path: ^/*, roles: ROLE_USER }

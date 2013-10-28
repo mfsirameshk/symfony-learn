@@ -66,6 +66,11 @@ class User implements UserInterface {
      * @MongoDB\Date
      */
     protected $dob;
+    
+    /**
+     * @MongoDB\Date
+     */
+    protected $ccExp;
 
     /**
      * @MongoDB\ReferenceOne(targetDocument="Group")
@@ -503,4 +508,48 @@ class User implements UserInterface {
             ) = unserialize($serialized);
     }
 
+
+    /**
+     * Set lastLogin
+     *
+     * @param string $lastLogin
+     * @return self
+     */
+    public function setLastLogin($lastLogin)
+    {
+        $this->lastLogin = $lastLogin;
+        return $this;
+    }
+
+    /**
+     * Get lastLogin
+     *
+     * @return string $lastLogin
+     */
+    public function getLastLogin()
+    {
+        return $this->lastLogin;
+    }
+
+    /**
+     * Set totalLogins
+     *
+     * @param int $totalLogins
+     * @return self
+     */
+    public function setTotalLogins($totalLogins)
+    {
+        $this->totalLogins = $totalLogins;
+        return $this;
+    }
+
+    /**
+     * Get totalLogins
+     *
+     * @return int $totalLogins
+     */
+    public function getTotalLogins()
+    {
+        return empty($this->totalLogins) ? 0 : $this->totalLogins;
+    }
 }

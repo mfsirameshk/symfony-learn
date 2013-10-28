@@ -1,0 +1,31 @@
+mongod --help for help and startup options
+Fri Oct 25 16:14:03 [initandlisten] MongoDB starting : pid=13451 port=27017 dbpath=/data/db/ 64-bit host=ramesh
+Fri Oct 25 16:14:03 [initandlisten] db version v2.0.4, pdfile version 4.5
+Fri Oct 25 16:14:03 [initandlisten] git version: nogitversion
+Fri Oct 25 16:14:03 [initandlisten] build info: Linux lamiak 2.6.42-37-generic #58-Ubuntu SMP Thu Jan 24 15:28:10 UTC 2013 x86_64 BOOST_LIB_VERSION=1_46_1
+Fri Oct 25 16:14:03 [initandlisten] options: {}
+Fri Oct 25 16:14:03 [initandlisten] journal dir=/data/db/journal
+Fri Oct 25 16:14:03 [initandlisten] recover : no journal files present, no recovery needed
+Fri Oct 25 16:14:04 [websvr] admin web console waiting for connections on port 28017
+Fri Oct 25 16:14:04 [initandlisten] waiting for connections on port 27017
+Fri Oct 25 16:14:35 [initandlisten] connection accepted from 127.0.0.1:54200 #1
+Fri Oct 25 16:15:04 [clientcursormon] mem (MB) res:31 virt:883 mapped:80
+Fri Oct 25 16:15:30 got kill or ctrl c or hup signal 2 (Interrupt), will terminate after current cmd ends
+Fri Oct 25 16:15:30 [interruptThread] now exiting
+Fri Oct 25 16:15:30 dbexit: 
+Fri Oct 25 16:15:30 [interruptThread] shutdown: going to close listening sockets...
+Fri Oct 25 16:15:30 [interruptThread] closing listening socket: 6
+Fri Oct 25 16:15:30 [interruptThread] closing listening socket: 7
+Fri Oct 25 16:15:30 [interruptThread] closing listening socket: 8
+Fri Oct 25 16:15:30 [interruptThread] removing socket file: /tmp/mongodb-27017.sock
+Fri Oct 25 16:15:30 [interruptThread] shutdown: going to flush diaglog...
+Fri Oct 25 16:15:30 [interruptThread] shutdown: going to close sockets...
+Fri Oct 25 16:15:30 [interruptThread] shutdown: waiting for fs preallocator...
+Fri Oct 25 16:15:30 [interruptThread] shutdown: lock for final commit...
+Fri Oct 25 16:15:30 [interruptThread] shutdown: final commit...
+Fri Oct 25 16:15:30 [interruptThread] shutdown: closing all files...
+Fri Oct 25 16:15:30 [interruptThread] closeAllFiles() finished
+Fri Oct 25 16:15:30 [interruptThread] journalCleanup...
+Fri Oct 25 16:15:30 [interruptThread] removeJournalFiles
+Fri Oct 25 16:15:30 [interruptThread] shutdown: removing fs lock...
+Fri Oct 25 16:15:30 dbexit: really exiting now

@@ -16,10 +16,11 @@ framework:
         engines: ['twig']
         #assets_version: SomeVersionScheme
     default_locale:  "%locale%"
-    trusted_proxies: ~
+    trusted_proxies: [127.0.0.1]
     session:         ~
     fragments:       ~
     http_method_override: true
+    esi: { enabled: true }
 
 # Twig Configuration
 twig:
@@ -28,6 +29,7 @@ twig:
     form:
         resources:
             - 'RameshBlogBundle:Forms:gender.html.twig'
+            - 'RameshExpiryFieldBundle:Form:expiry.html.twig'
 
 # Assetic Configuration
 assetic:

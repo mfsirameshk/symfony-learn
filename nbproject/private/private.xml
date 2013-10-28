@@ -3,19 +3,27 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/var/www/Symfony/src/Ramesh/BlogBundle/Repository/UserRepository.php</file>
+            <file>file:/var/www/Symfony/app/config/config.yml</file>
+            <file>file:/var/www/Symfony/src/Ramesh/BlogBundle/Resources/views/User/login.html.twig</file>
             <file>file:/var/www/Symfony/src/Ramesh/BlogBundle/Resources/views/User/new.html.twig</file>
             <file>file:/var/www/Symfony/src/Ramesh/BlogBundle/Document/User.php</file>
+            <file>file:/var/www/Symfony/src/Ramesh/BlogBundle/Repository/UserRepository.php</file>
             <file>file:/var/www/Symfony/src/Ramesh/BlogBundle/Controller/UserController.php</file>
+            <file>file:/var/www/Symfony/app/AppKernel.php</file>
             <file>file:/var/www/Symfony/src/Ramesh/BlogBundle/Resources/config/validation.yml</file>
             <file>file:/var/www/Symfony/src/Ramesh/BlogBundle/Controller/PostController.php</file>
             <file>file:/var/www/Symfony/src/Ramesh/BlogBundle/Resources/config/routing.yml</file>
             <file>file:/var/www/Symfony/src/Ramesh/BlogBundle/Resources/config/services.yml</file>
             <file>file:/var/www/Symfony/app/config/security.yml</file>
             <file>file:/var/www/Symfony/src/Ramesh/BlogBundle/Form/Type/UserType.php</file>
+            <file>file:/var/www/Symfony/web/apple-touch-icon.png</file>
+            <file>file:/var/www/Symfony/web/app_dev.php</file>
             <file>file:/var/www/Symfony/src/.htaccess</file>
-            <file>file:/var/www/Symfony/composer.json</file>
             <file>file:/var/www/Symfony/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php</file>
+            <file>file:/var/www/Symfony/src/Ramesh/BlogBundle/Listener/LoginListener.php</file>
+            <file>file:/var/www/Symfony/composer.json</file>
+            <file>file:/var/www/Symfony/src/Ramesh/BlogBundle/Tests/Controller/UserControllerTest.php</file>
+            <file>file:/var/www/Symfony/app/phpunit.xml.dist</file>
         </group>
     </open-files>
 </project-private>
